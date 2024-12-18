@@ -15,7 +15,7 @@ const mongoose = require('mongoose');
 
 const connectDb = async () => {
     try {
-        const conn = await mongoose.connect('mongodb+srv://ducviet:09122004@datn-1.pbl5t.mongodb.net/web-star?retryWrites=true&w=majority&appName=datn-1', {
+        const conn = await mongoose.connect('mongodb://localhost:27017/WEB209-FE2', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
