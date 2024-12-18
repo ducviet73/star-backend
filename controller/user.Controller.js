@@ -205,7 +205,7 @@ const forgotPassword = async (req, res) => {
         console.log('Generated Reset Token:', token);  // Log the token to verify
         
         // Create a reset URL
-        const resetUrl = `http://localhost:3000/users/reset-password/${token}`;
+        const resetUrl = `https://star-backend-z1cm.onrender.com/users/reset-password/${token}`;
         
         // Send reset URL to the user's email (using nodemailer)
         const transporter = nodemailer.createTransport({
