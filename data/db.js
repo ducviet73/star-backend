@@ -15,10 +15,8 @@ const mongoose = require('mongoose');
 
 const connectDb = async () => {
     try {
-        const conn = await mongoose.connect('mongodb+srv://ducviet:09122004@datn-1.pbl5t.mongodb.net/web-star?retryWrites=true&w=majority&appName=datn-1', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        const conn = await mongoose.connect('mongodb+srv://ducviet:09122004@datn-1.pbl5t.mongodb.net/web-star?retryWrites=true&w=majority');
+
         console.log('Kết nối thành công đến MongoDB');
         return conn;
     } catch (error) {
