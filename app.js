@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
@@ -13,11 +14,6 @@ var reviewRoutes = require('./routes/review');
 var promotionalRouter = require('./routes/promotional');
 var promotionalProductsRouter = require('./routes/PromotionalProduct');
 
-const fontPath = path.join(__dirname, '../fonts/Roboto-Regular.ttf');
-if (!fs.existsSync(fontPath)) {
-  console.error('Font file not found at:', fontPath);
-  throw new Error('Font file is required for generating invoices.');
-}
 var app = express();
 connectDb();
 app.use(cors());
